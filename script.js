@@ -22,21 +22,26 @@ function playRound(playerSelection, computerSelection) {
     let playerWins = `You win! ${playerSelection} beats ${computerSelection}`;
     let computerWins = `You lose! ${computerSelection} beats ${playerSelection}`;
     let draw = `It's a tie! Both selected ${playerSelection}`
-    let winningMessage;
+    let thisRoundWinner;
     
     if (playerSelection == "rock" && computerSelection == "scissors") {
-        winningMessage = playerWins;
+        console.log(playerWins);
+        thisRoundWinner = "player";
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        winningMessage = playerWins;
+        console.log(playerWins);
+        thisRoundWinner = "player";
     } else if (playerSelection == "paper" && computerSelection == "rock") {
-        winningMessage = playerWins;
+        console.log(playerWins);
+        thisRoundWinner = "player";
     } else if (playerSelection == computerSelection) {
-        winningMessage = draw;
+        console.log(draw);
+        thisRoundWinner = "draw";
     } else {
-        winningMessage = computerWins;
+        console.log(computerWins);
+        thisRoundWinner = "computer";
     }
     
-    return winningMessage;
+    return thisRoundWinner;
 }
 
 console.log(playRound());
