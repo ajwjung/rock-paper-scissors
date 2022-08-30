@@ -1,2 +1,5 @@
-# rock-paper-scissors
-The first JavaScript project as part of The Odin Project
+# Rock Paper Scissors
+
+This is the first JavaScript project that's part of The Odin Project. The idea is to create a simple "Rock, Paper, Scissors" game where the user plays five rounds against the computer and the party that won the most number of rounds is the ultimate winner. Full details about this project can be found on [The Odin Project's page](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors).
+
+For this game, I was able to practice creating and using functions, `if/else` conditional statements, loops, and `return` statements. I used a `for` loop to run five consecutive rounds. Each round, the user inputs their choice while the computer randomly generates theirs, then the console prints the winner at the end. The winner's score is then incremented by 1 and the party with the highest score after five rounds is declared the winner.
