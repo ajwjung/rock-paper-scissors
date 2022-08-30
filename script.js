@@ -42,7 +42,21 @@ function playRound(playerSelection, computerSelection) {
 console.log(playRound());
 
 
-// Write function that plays 5 rounds using the function above ^^
-    // Use console.log() to display who the winner is after each round
-    // Get user input using prompt()
+// Function: play 5 rounds using a loop and playRound()
+// Use if/else statements to tally player and computer scores each round
+// Compare scores using if/else and print the final winner to console
 
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound());
+        
+        // Increment winner's score by 1
+    }
+
+    return `${playerScore} vs. ${computerScore}`;
+}
+
+console.log(game());
