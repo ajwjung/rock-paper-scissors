@@ -54,9 +54,10 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let playerScore = 0;
     let computerScore = 0;
+    let winningMessage;
 
     for (let i = 0; i < 5; i++) {
-        console.log(`Round ${i + 1}`);
+        console.log(`Round ${i + 1} is starting...`);
         currentWinner = playRound();
         
         if (currentWinner === "player") {
@@ -70,7 +71,15 @@ function game() {
         }
     }
 
-    return `${playerScore} vs. ${computerScore}`;
+    if (playerScore > computerScore) {
+        winningMessage = "Player won the game!"
+    } else if (playerScore < computerScore) {
+        winningMessage = "Computer won the game!"
+    } else {
+        winningMessage = "The game ended in a draw."
+    }
+
+    return winningMessage;
 }
 
 console.log(game());
