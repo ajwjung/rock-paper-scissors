@@ -7,7 +7,7 @@ function getComputerChoice() {
     return allChoices[selection];
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
 // Function: play a single round
 // Requires computer's selection, user's selection
@@ -17,7 +17,7 @@ function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice().toLowerCase();
     playerSelection = prompt(`Make a selection: "Rock", "Paper", or "Scissors"`).toLowerCase();
 
-    console.log(computerSelection, playerSelection);
+    // console.log(computerSelection, playerSelection);
 
     let playerWins = `You win! ${playerSelection} beats ${computerSelection}`;
     let computerWins = `You lose! ${computerSelection} beats ${playerSelection}`;
@@ -44,7 +44,7 @@ function playRound(playerSelection, computerSelection) {
     return thisRoundWinner;
 }
 
-console.log(playRound());
+// console.log(playRound());
 
 
 // Function: play 5 rounds using a loop and playRound()
@@ -56,9 +56,18 @@ function game() {
     let computerScore = 0;
 
     for (let i = 0; i < 5; i++) {
-        console.log(playRound());
+        console.log(`Round ${i + 1}`);
+        currentWinner = playRound();
         
-        // Increment winner's score by 1
+        if (currentWinner === "player") {
+            console.log(`Player won Round ${i + 1}!`);
+            playerScore++;
+        } else if (currentWinner === "computer") {
+            console.log(`Computer won Round ${i + 1}!`);
+            computerScore++;
+        } else {
+            console.log(`Round ${i + 1} ended in a draw.`);
+        }
     }
 
     return `${playerScore} vs. ${computerScore}`;
