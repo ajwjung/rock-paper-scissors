@@ -8,7 +8,6 @@ function getComputerChoice() {
 // Plays one round
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice().toLowerCase();
-    playerSelection = prompt(`Make a selection: "Rock", "Paper", or "Scissors"`).toLowerCase();
 
     let playerWins = `You win! ${playerSelection} beats ${computerSelection}`;
     let computerWins = `You lose! ${computerSelection} beats ${playerSelection}`;
@@ -38,5 +37,7 @@ function playRound(playerSelection, computerSelection) {
 const btns = document.querySelectorAll("button");
 
 btns.forEach((button) => {
-    button.addEventListener("click", playRound);
+    button.addEventListener("click", function (e) {
+        playRound(button.id)
+    });
 });
