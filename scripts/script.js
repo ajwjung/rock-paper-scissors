@@ -23,7 +23,9 @@ function playRound(playerSelection, computerSelection) {
         }
         
         scoreBox.textContent = `Player: ${playerScore} vs. Computer: ${computerScore}`;
-    } else if (playerScore == 5) {
+    }
+    
+    if (playerScore == 5) {
         results.textContent = "Congratulations! You won the game!";
     } else if (computerScore == 5) {
         results.textContent = "Sorry, you lost! Better luck next time!";
