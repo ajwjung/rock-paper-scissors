@@ -9,25 +9,18 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice().toLowerCase();
 
-    let playerWins = `You win! ${playerSelection} beats ${computerSelection}`;
-    let computerWins = `You lose! ${computerSelection} beats ${playerSelection}`;
-    let draw = `It's a tie! Both selected ${playerSelection}`
     let thisRoundWinner;
     
-    if (playerSelection == "rock" && computerSelection == "scissors") {
-        div.textContent = playerWins;
-        thisRoundWinner = "player";
-    } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        div.textContent = playerWins;
-        thisRoundWinner = "player";
-    } else if (playerSelection == "paper" && computerSelection == "rock") {
-        div.textContent = playerWins;
+    if (playerSelection == "rock" && computerSelection == "scissors" ||
+    playerSelection == "scissors" && computerSelection == "paper" ||
+    playerSelection == "paper" && computerSelection == "rock") {
+        div.textContent = `You win! ${playerSelection} beats ${computerSelection}`;
         thisRoundWinner = "player";
     } else if (playerSelection == computerSelection) {
-        div.textContent = draw;
+        div.textContent = `It's a tie! Both selected ${playerSelection}`;
         thisRoundWinner = "draw";
     } else {
-        div.textContent = computerWins;
+        div.textContent = `You lose! ${computerSelection} beats ${playerSelection}`;
         thisRoundWinner = "computer";
     }
     
