@@ -15,19 +15,19 @@ function playRound(playerSelection, computerSelection) {
     let thisRoundWinner;
     
     if (playerSelection == "rock" && computerSelection == "scissors") {
-        console.log(playerWins);
+        div.textContent = playerWins;
         thisRoundWinner = "player";
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        console.log(playerWins);
+        div.textContent = playerWins;
         thisRoundWinner = "player";
     } else if (playerSelection == "paper" && computerSelection == "rock") {
-        console.log(playerWins);
+        div.textContent = playerWins;
         thisRoundWinner = "player";
     } else if (playerSelection == computerSelection) {
-        console.log(draw);
+        div.textContent = draw;
         thisRoundWinner = "draw";
     } else {
-        console.log(computerWins);
+        div.textContent = computerWins;
         thisRoundWinner = "computer";
     }
     
@@ -35,9 +35,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 const btns = document.querySelectorAll("button");
+const div = document.querySelector(".results");
 
 btns.forEach((button) => {
     button.addEventListener("click", function (e) {
         playRound(button.id)
     });
 });
+
