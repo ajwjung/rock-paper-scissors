@@ -35,36 +35,8 @@ function playRound(playerSelection, computerSelection) {
     return thisRoundWinner;
 }
 
-// Plays game five times
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    let winningMessage;
+const btns = document.querySelectorAll("button");
 
-    for (let i = 0; i < 5; i++) {
-        console.log(`Round ${i + 1} is starting...`);
-        currentWinner = playRound();
-        
-        if (currentWinner === "player") {
-            console.log(`Player won Round ${i + 1}!`);
-            playerScore++;
-        } else if (currentWinner === "computer") {
-            console.log(`Computer won Round ${i + 1}!`);
-            computerScore++;
-        } else {
-            console.log(`Round ${i + 1} ended in a draw.`);
-        }
-    }
-
-    if (playerScore > computerScore) {
-        winningMessage = "Player won the game!"
-    } else if (playerScore < computerScore) {
-        winningMessage = "Computer won the game!"
-    } else {
-        winningMessage = "The game ended in a draw."
-    }
-
-    return winningMessage;
-}
-
-console.log(game());
+btns.forEach((button) => {
+    button.addEventListener("click", playRound);
+});
