@@ -27,16 +27,20 @@ function playRound(playerSelection, computerSelection) {
     
     if (playerScore == 5) {
         results.textContent = "Congratulations! You won the game!";
+        restart.style.visibility = "visible";
     } else if (computerScore == 5) {
         results.textContent = "Sorry, you lost! Better luck next time!";
+        restart.style.visibility = "visible";
     }
 }
 
 const btns = document.querySelectorAll(".choices");
+const restart = document.querySelector("#restart");
 const results = document.querySelector(".results");
 const scoreBox = document.querySelector(".scores");
 
 scoreBox.style.visibility = "hidden";
+restart.style.visibility = "hidden";
 
 btns.forEach((button) => {
     button.addEventListener("click", function (e) {

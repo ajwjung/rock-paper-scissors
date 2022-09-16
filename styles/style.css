@@ -32,13 +32,18 @@ button > img {
     margin: 10px;
 }
 
-.choices > button {
+.choices {
     height: 150px;
     width: 150px;
     margin: 50px 20px;
     background-color: transparent;
     background-repeat: no-repeat;
     border: none;
+}
+
+#restart {
+    font-family: 'Chelsea Market', cursive;
+    background-color: transparent;
 }
 
 .results,
