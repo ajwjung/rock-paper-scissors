@@ -8,7 +8,7 @@ function getComputerChoice() {
 let playerScore = 0;
 let computerScore = 0;
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {     
     if (playerScore < 5 && computerScore < 5) {
         if (playerSelection == "rock" && computerSelection == "scissors" ||
         playerSelection == "scissors" && computerSelection == "paper" ||
@@ -24,12 +24,14 @@ function playRound(playerSelection, computerSelection) {
         
         scoreBox.textContent = `Player: ${playerScore} vs. Computer: ${computerScore}`;
     }
-    
+
     if (playerScore == 5) {
         results.textContent = "Congratulations! You won the game!";
+        results.style.color = "rgb(221, 168, 168)";
         restart.style.visibility = "visible";
     } else if (computerScore == 5) {
         results.textContent = "Sorry, you lost! Better luck next time!";
+        results.style.color = "rgb(175, 207, 199)";
         restart.style.visibility = "visible";
     }
 }
@@ -56,6 +58,7 @@ btns.forEach((button) => {
 restart.addEventListener("click", function (e) {
     playerScore = 0;
     computerScore = 0;
+    results.style.color = "rgb(240, 240, 240)";
     results.textContent = "Good luck!";
     scoreBox.textContent = "";
     restart.style.visibility = "hidden";
