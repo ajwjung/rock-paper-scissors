@@ -52,3 +52,11 @@ btns.forEach((button) => {
         playRound(player, computer);
     });
 });
+
+restart.addEventListener("click", function (e) {
+    playerScore = 0;
+    computerScore = 0;
+    results.textContent = "Good luck!";
+    scoreBox.textContent = "";
+    restart.style.visibility = "hidden";
+})
