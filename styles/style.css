@@ -25,6 +25,18 @@ button > img {
     align-items: center;
 }
 
+#header-r {
+    color: rgb(199, 174, 157);
+}
+
+#header-p {
+    color: rgb(175, 207, 199);
+}
+
+#header-s {
+    color: rgb(221, 168, 168);
+}
+
 .button-container {
     display: flex;
     justify-content: space-evenly;
@@ -49,7 +61,7 @@ button > img {
 
     font-family: 'Chelsea Market', cursive;
     background-color: transparent;
-    color:rgb(231, 173, 133);
+    color:rgb(231, 189, 133);
     font-size: 20px;
     border-color: rgb(231, 173, 133);
 }
