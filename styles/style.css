@@ -1,6 +1,8 @@
 body {
     background-color: rgb(50, 50, 50);
     color: rgb(240, 240, 240);
+    text-align: center;
+    margin: 0 auto;
 }
 
 .container {
@@ -13,6 +15,12 @@ body {
 
 .btns {
     display: flex;
+    justify-content: space-evenly;
     gap: 25px;
     margin: 10px;
+}
+
+.results,
+.scores {
+    margin: 5px;
 }
