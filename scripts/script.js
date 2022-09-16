@@ -32,14 +32,18 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const btns = document.querySelectorAll("button");
+const btns = document.querySelectorAll(".choices");
 const results = document.querySelector(".results");
 const scoreBox = document.querySelector(".scores");
+
+scoreBox.style.visibility = "hidden";
 
 btns.forEach((button) => {
     button.addEventListener("click", function (e) {
         let player = button.id;
         let computer = getComputerChoice();
+
+        scoreBox.style.visibility = "visible";
         
         playRound(player, computer);
     });
