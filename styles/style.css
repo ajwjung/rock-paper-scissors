@@ -12,15 +12,6 @@ h1 {
     font-family: 'Chelsea Market', cursive;
 }
 
-button {
-    height: 150px;
-    width: 150px;
-    margin: 50px 20px;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-}
-
 button > img {
     height: 150px;
     width: 150px;
@@ -34,14 +25,24 @@ button > img {
     align-items: center;
 }
 
-.btns {
+.button-container {
     display: flex;
     justify-content: space-evenly;
     gap: 25px;
     margin: 10px;
 }
 
+.choices > button {
+    height: 150px;
+    width: 150px;
+    margin: 50px 20px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+}
+
 .results,
 .scores {
     margin: 5px;
+    font-size: 28px;
 }
