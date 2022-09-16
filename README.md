@@ -6,6 +6,6 @@ For this game, I was able to practice creating and using functions, `if/else` co
 
 # Rock Paper Scissors - Revisited
 
-I revisited this game after learning more about DOM manipulation and events. The second part of this project was to make a UI for the game; more details can be found on [The Odin Project's page](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors). I made a very basic UI using HTML and JavaScript and was able to learn more about how to use event listeners in the process.
+I revisited this game after learning more about DOM manipulation and events. The second part of this project was to make a UI for the game; more details can be found on [The Odin Project's page](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors). I made a simple UI using HTML, CSS, and JavaScript and was able to learn more about how to use event listeners in the process.
 
-One key difference in the updated version of this game is that the user plays against the computer until one party wins 5 consecutive rounds as opposed to only playing 5 rounds total.
+One key difference in the updated version of this game is that the user plays against the computer until one party wins 5 consecutive rounds as opposed to only playing 5 rounds total. The user also plays the game using the UI rather than the console.
