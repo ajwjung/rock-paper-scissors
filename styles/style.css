@@ -3,7 +3,13 @@ body {
     color: rgb(240, 240, 240);
     text-align: center;
     margin: 0 auto;
+
+    font-family: 'Signika', sans-serif;
     font-size: 24px;
+}
+
+h1 {
+    font-family: 'Chelsea Market', cursive;
 }
 
 button {
